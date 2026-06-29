@@ -1,192 +1,156 @@
-# 🚀 3D Portfolio
+# Deepak Kumar — Portfolio
 
-> **Deepak Kumar's personal portfolio** — B.Tech CSE student at Galgotias University, built on the open-source [3d-portfolio template by Naresh Khatri](https://github.com/Naresh-Khatri/3d-portfolio).
-> <!-- TODO: add live site link once deployed — https://deepakkumar.vercel.app -->
+> B.Tech CSE student at Galgotias University · Software Developer · Problem Solver
+>
+> 🔗 **Live site:** [deepakkumar.vercel.app](https://deepakkumar.vercel.app) <!-- TODO: update once deployed -->
 
-A jaw-dropping developer portfolio packed with interactive 3D animations, buttery smooth transitions, and a space-themed aesthetic. Not your average portfolio template! This one has a fully interactive 3D keyboard where each keycap is a skill.
+Built on the open-source [3d-portfolio template](https://github.com/Naresh-Khatri/3d-portfolio) by Naresh Khatri — customised with my own projects, skills, internships, and achievements.
 
-> **Free to use!** This portfolio is open source. If you use it, a credit/link back would be really appreciated 🙏
+---
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Naresh-Khatri/3d-portfolio)
+## What's inside
 
-![Portfolio Preview](https://github.com/Naresh-Khatri/Portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
+| Section | Content |
+|---|---|
+| **Hero** | Name, title, resume download, GitHub & LinkedIn |
+| **Skills** | Interactive 3D keyboard — each keycap is a skill |
+| **Experience** | Google for Developers AI/ML internship · AWS Academy GenAI internship |
+| **Education** | Galgotias University B.Tech CSE · High School, Buxar |
+| **Achievements** | SIH 2025 · Code Astra 2025 · LeetCode 50-Day Badge |
+| **Certifications** | Oracle Academy SQL · GUVI C & Java |
+| **Projects** | Mobile Repairing System · Hospital Management System |
+| **Contact** | Email form powered by Resend |
 
-## ✨ Features
+---
 
-- **Interactive 3D Keyboard** — Custom Spline keyboard where each keycap represents a skill, revealing titles and descriptions on hover/press
-- **Buttery Animations** — GSAP + Framer Motion powered scroll, hover, and reveal animations
-- **Space Theme** — Floating particles on a dark canvas for a cosmic vibe
-- **Light & Dark Mode** — Full theme support with cheeky disclaimer toasts
-- **Responsive** — Works across all screen sizes
-- **Contact Form** — Email delivery via Resend
-- **Analytics** _(optional)_ — Umami analytics integration
-
-## 🛠️ Tech Stack
+## Tech stack
 
 | Layer | Technologies |
 |---|---|
-| **Framework** | Next.js 14, React 18, TypeScript |
-| **Styling** | Tailwind CSS, Shadcn UI, Aceternity UI |
+| **Framework** | Next.js 16, React 19, TypeScript |
+| **Styling** | Tailwind CSS, Shadcn UI |
 | **Animation** | GSAP, Framer Motion |
 | **3D** | Spline Runtime |
 | **Email** | Resend |
-| **Misc** | Lenis (smooth scroll), Zod, next-themes |
+| **Scroll** | Lenis smooth-scroll |
 
 ---
 
-## 🚀 Getting Started
+## Local development
 
-### Prerequisites
+```bash
+# 1. Clone
+git clone https://github.com/your-github-username/3d-portfolio.git  # TODO: update URL
+cd 3d-portfolio
 
-- Node.js (v18+)
-- pnpm (recommended), npm, or yarn
+# 2. Install
+pnpm install
 
-### Installation
+# 3. Environment variables
+cp .env.example .env.local
+# Fill in RESEND_API_KEY (required for contact form)
 
-1. **Clone the repository:**
-
-    ```bash
-    # TODO: replace with your fork's URL once you've pushed to GitHub
-    git clone https://github.com/your-github-username/3d-portfolio.git
-    cd 3d-portfolio
-    ```
-
-    _Original template: https://github.com/Naresh-Khatri/3d-portfolio_
-
-2. **Install dependencies:**
-
-    ```bash
-    pnpm install
-    ```
-
-3. **Set up environment variables:**
-
-    Copy `.env.example` to `.env.local` and fill in the values:
-
-    ```bash
-    cp .env.example .env.local
-    ```
-
-    | Variable | Required | Description |
-    |---|---|---|
-    | `RESEND_API_KEY` | Yes | API key from [Resend](https://resend.com) for the contact form |
-    | `NEXT_PUBLIC_WS_URL` | No | WebSocket server URL for realtime features (cursors, chat, presence) |
-    | `UMAMI_DOMAIN` | No | Umami analytics script URL |
-    | `UMAMI_SITE_ID` | No | Umami website ID |
-
-4. **Run the development server:**
-
-    ```bash
-    pnpm dev
-    ```
-
-5. Open [http://localhost:3000](http://localhost:3000) and see the magic ✨
-
----
-
-## 🎨 Make It Your Own
-
-All personal info is centralized in [`src/data/config.ts`](src/data/config.ts). Edit this single file to rebrand the portfolio:
-
-```ts
-const config = {
-  title: "Your Name | Your Title",
-  description: {
-    long: "Your long description for SEO...",
-    short: "Your short description...",
-  },
-  keywords: ["your", "keywords"],
-  author: "Your Name",
-  email: "you@example.com",
-  site: "https://yoursite.com",
-
-  // GitHub stars button in the header
-  githubUsername: "your-github-username",
-  githubRepo: "your-repo-name",
-
-  social: {
-    twitter: "https://x.com/you",
-    linkedin: "https://linkedin.com/in/you",
-    instagram: "https://instagram.com/you",
-    facebook: "https://facebook.com/you",
-    github: "https://github.com/you",
-  },
-};
+# 4. Run
+pnpm dev
 ```
 
-Other files you'll want to customize:
+Open [http://localhost:3000](http://localhost:3000).
+
+---
+
+## Personalisation — files to edit
 
 | File | What to change |
 |---|---|
-| `src/data/projects.tsx` | Your projects, screenshots, descriptions, and tech stacks |
-| `src/data/constants.ts` | Skills list (name, description, icon) and work experience |
-| `public/assets/` | Your images, OG image, and project screenshots |
+| `src/data/config.ts` | Name, email, site URL, GitHub username, social links |
+| `src/data/constants.ts` | Skills descriptions, internship details |
+| `src/data/achievements.ts` | Education, achievements, certifications |
+| `src/data/projects.tsx` | Project titles, descriptions, tech stacks, links |
+| `public/Deepak_Kumar_Resume.pdf` | Your actual resume PDF |
+| `public/assets/seo/og-image.png` | Social share preview image |
+| `public/assets/me.jpg` | Your profile photo |
+| `public/assets/projects-screenshots/` | Real screenshots for each project |
 
 ---
 
-## ⌨️ Updating the 3D Keyboard Skills
+## Things still TODO
 
-The 3D keyboard keycaps are baked into a Spline file. To update the skills displayed on the keyboard:
+Replace every placeholder before going live:
 
-1. **Import** the `public/assets/skills-keyboard.spline` file into [Spline](https://spline.design/)
-2. **Unhide** the keycap objects you want to edit
-3. **Update** the logo images on each keycap to your new skill icons
-4. **Rename** each keycap object to match the skill's `name` field in `src/data/constants.ts` (e.g. `js`, `react`, `docker`)
-5. **Hide** all keycap objects again
-6. **Export** the scene and overwrite `public/assets/skills-keyboard.spline`
+- [ ] `src/data/config.ts` → `site` — your deployed Vercel URL
+- [ ] `src/data/config.ts` → `githubUsername` — your GitHub username
+- [ ] `src/data/config.ts` → `social.linkedin` — your LinkedIn profile URL
+- [ ] `src/data/config.ts` → `social.github` — your GitHub profile URL
+- [ ] `src/data/projects.tsx` → GitHub repo URLs for both projects
+- [ ] `src/data/projects.tsx` → Confirm tech stacks for both projects
+- [ ] `public/Deepak_Kumar_Resume.pdf` — replace with your real resume
+- [ ] `public/assets/seo/og-image.png` — replace with your own OG image
+- [ ] `public/assets/me.jpg` — replace with your actual photo
+- [ ] `public/assets/projects-screenshots/mobile-repair/landing.png` — real screenshot
+- [ ] `public/assets/projects-screenshots/hospital-management/landing.png` — real screenshot
+- [ ] `README.md` → update live site URL and git clone URL after pushing to GitHub
+- [ ] `public/assets/skills-keyboard.spline` — update in Spline editor if you want different keycap icons (see "Keyboard" section below)
 
-After updating the Spline file, make sure `src/data/constants.ts` has matching entries for every skill on the keyboard:
+---
 
-```ts
-// Each keycap object name in Spline must match a key in SKILLS
-export const SKILLS: Record<SkillNames, Skill> = {
-  js: { name: "js", label: "JavaScript", shortDescription: "...", ... },
-  react: { name: "react", label: "React", shortDescription: "...", ... },
-  // ... add/remove entries to match your keyboard
-};
+## What to add — images and assets guide
+
+### Profile photo
+- **File:** `public/assets/me.jpg`
+- **Size:** 400×400 px minimum, square crop, JPG or WebP
+- Used in the hero section
+
+### OG image (social share preview)
+- **File:** `public/assets/seo/og-image.png`
+- **Size:** 1200×630 px (standard Open Graph)
+- Shows up when sharing your portfolio link on WhatsApp, Twitter, LinkedIn
+
+### Project screenshots
+Add real screenshots at these paths (PNG, 1280×800 px recommended, 16:10 ratio):
+
+```
+public/assets/projects-screenshots/
+├── mobile-repair/
+│   └── landing.png          ← main card image shown in grid
+├── hospital-management/
+│   └── landing.png          ← main card image shown in grid
 ```
 
-The `SkillNames` enum, `SKILLS` record, and the Spline keycap names must all stay in sync for the keyboard interactions to work correctly.
+To add more screenshots per project, add the files and update `screenshots` array and `SlideShow` paths in `src/data/projects.tsx`.
+
+### Resume PDF
+- **File:** `public/Deepak_Kumar_Resume.pdf`
+- Drop your exported PDF here — it's linked from the hero button and the `/resume` page
 
 ---
 
-## 🔌 Realtime Features (Optional)
+## Updating the 3D keyboard skills
 
-The portfolio supports optional realtime features powered by a **separate backend API**:
+The keyboard keycaps are stored in a Spline binary file (`public/assets/skills-keyboard.spline`). To change which skills appear:
 
-- 🖱️ **Live cursors** — See other visitors' cursors in realtime
-- 👥 **Online presence** — Shows who's currently on the site
-- 💬 **Chat** — Live chat between visitors
+1. Open `public/assets/skills-keyboard.spline` in [Spline](https://spline.design/)
+2. Unhide the keycaps you want to edit
+3. Rename each keycap object to match a `name` key in `src/data/constants.ts` (e.g. `python`, `java`, `git`)
+4. Re-export and overwrite the file
 
-These features activate automatically when the `NEXT_PUBLIC_WS_URL` environment variable is set. Without it, the portfolio works perfectly fine as a static site — no realtime features, no backend dependency.
-
-> [!NOTE]
-> The backend API is **not open source**. This is intentional! Too many people have cloned the portfolio and claimed they built it from scratch. The realtime server stays private to keep the live experience unique make make it standout.
-
+The keycap object names in Spline must exactly match the `name` field values in `SKILLS` in `constants.ts` for hover/press interactions to work.
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Naresh-Khatri/3d-portfolio)
+Push to GitHub then connect to [Vercel](https://vercel.com). Set these environment variables in the Vercel dashboard:
 
-This site is deployed on **Vercel**. To deploy your own:
-
-1. Push your code to a GitHub repository
-2. Connect the repository to [Vercel](https://vercel.com)
-3. Add your environment variables in the Vercel dashboard
-4. Vercel handles the rest — automatic deployments on every push
-
----
-
-## 🤝 Contributing
-
-If you'd like to contribute or suggest improvements, feel free to open an issue or submit a pull request. All contributions are welcome!
+| Variable | Required | Description |
+|---|---|---|
+| `RESEND_API_KEY` | Yes | From [resend.com](https://resend.com) — powers the contact form |
+| `NEXT_PUBLIC_GA_ID` | No | Google Analytics measurement ID |
+| `UMAMI_DOMAIN` | No | Umami analytics script URL |
+| `UMAMI_SITE_ID` | No | Umami site ID |
 
 ---
 
-## 📄 License
+## Credits
 
-This project is open source and available under the [MIT License](LICENSE).
-
-If you use this portfolio, a credit or link back to the [original repo](https://github.com/Naresh-Khatri/3d-portfolio) would be much appreciated ❤️
+Original template by [Naresh Khatri](https://github.com/Naresh-Khatri/3d-portfolio) — open source under the MIT License.
+If you fork this, a link back to the original repo is appreciated.
